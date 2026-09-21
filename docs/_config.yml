@@ -1,0 +1,69 @@
+title: bo1zt Documentation
+description: Documentation site for bo1zt, the Black Ops 1 Zombies trainer.
+url: ""
+baseurl: ""
+lang: en-US
+timezone: UTC
+logo: /assets/images/bo1zt-icon.png
+
+markdown: kramdown
+kramdown:
+  input: GFM
+  syntax_highlighter_opts:
+    block:
+      line_numbers: false
+
+permalink: pretty
+
+theme: jekyll-vitepress-theme
+
+collections:
+  guides:
+    output: true
+    permalink: "/:name/"
+  reference:
+    output: true
+    permalink: "/:name/"
+
+defaults:
+  - scope:
+      path: ""
+    values:
+      layout: default
+  - scope:
+      type: guides
+    values:
+      layout: default
+  - scope:
+      type: reference
+    values:
+      layout: default
+
+jekyll_vitepress:
+  branding:
+    site_title: bo1zt
+    logo:
+      default: /assets/images/bo1zt-icon.png
+      alt: bo1zt
+      width: 24
+      height: 24
+  syntax:
+    light_theme: github
+    dark_theme: github.dark
+  github_star:
+    enabled: true
+    repository: idircarlos/bo1zt
+    text: Star
+    show_count: true
+
+plugins:
+  - jekyll-vitepress-theme
+
+exclude:
+  - _site
+  - .jekyll-cache
+  - .bundle
+  - vendor
+  - Gemfile
+  - Gemfile.lock
+  - README.md

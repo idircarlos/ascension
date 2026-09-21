@@ -1,0 +1,109 @@
+<script>
+(function () {
+  var repository = 'idircarlos/bo1zt';
+  var cacheKey = 'bo1zt:latest-release:' + repository;
+  var cacheTtlMs = 6 * 60 * 60 * 1000;
+  var pending = null;
+
+  function readCachedTag() {
+    if (!window.localStorage) {
+      return null;
+    }
+
+    try {
+      var entry = JSON.parse(localStorage.getItem(cacheKey));
+      if (!entry || typeof entry.tag !== 'string' || !isFinite(entry.ts)) {
+        return null;
+      }
+      if (Date.now() - entry.ts > cacheTtlMs) {
+        return null;
+      }
+      return entry.tag;
+    } catch (error) {
+      return null;
+    }
+  }
+
+  function writeCachedTag(tag) {
+    if (!window.localStorage) {
+      return;
+    }
+
+    try {
+      localStorage.setItem(cacheKey, JSON.stringify({ tag: tag, ts: Date.now() }));
+    } catch (error) {
+      return;
+    }
+  }
+
+  function fetchLatestTag() {
+    var cached = readCachedTag();
+    if (cached) {
+      return Promise.resolve(cached);
+    }
+
+    if (!pending) {
+      var apiRepository = repository.split('/').map(encodeURIComponent).join('/');
+      pending = fetch('https://api.github.com/repos/' + apiRepository + '/releases/latest', {
+        headers: { Accept: 'application/vnd.github+json' }
+      })
+        .then(function (response) {
+          if (!response.ok) {
+            throw new Error('GitHub API request failed');
+          }
+          return response.json();
+        })
+        .then(function (data) {
+          if (!data || typeof data.tag_name !== 'string' || !data.tag_name) {
+            throw new Error('GitHub response missing tag_name');
+          }
+          writeCachedTag(data.tag_name);
+          return data.tag_name;
+        })
+        .catch(function () {
+          return null;
+        });
+    }
+
+    return pending;
+  }
+
+  function labelTargets() {
+    return [].concat(
+      [].slice.call(document.querySelectorAll('#vp-version-button .text > span:first-child')),
+      [].slice.call(document.querySelectorAll('#vp-nav-screen-version-button .button-text')),
+      [].slice.call(document.querySelectorAll('#vp-version-menu a > span')),
+      [].slice.call(document.querySelectorAll('.VPNavScreenVersionLink > span'))
+    );
+  }
+
+  function applyLatestTag(tag) {
+    if (!tag) {
+      return;
+    }
+
+    labelTargets().forEach(function (target) {
+      var text = target.textContent.trim();
+      if (!/^v?\d/.test(text)) {
+        return;
+      }
+      target.textContent = /\(latest\)$/.test(text) ? tag + ' (latest)' : tag;
+    });
+  }
+
+  function update() {
+    if (!document.querySelector('#vp-version-selector')) {
+      return;
+    }
+    fetchLatestTag().then(applyLatestTag);
+  }
+
+  if (document.readyState === 'loading') {
+    document.addEventListener('DOMContentLoaded', update);
+  } else {
+    update();
+  }
+
+  document.addEventListener('turbo:load', update);
+})();
+</script>

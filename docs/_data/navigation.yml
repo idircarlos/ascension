@@ -1,0 +1,8 @@
+- title: Guide
+  url: /getting-started/
+  collections: [guides]
+- title: Reference
+  url: /code-style/
+  collections: [reference]
+- title: Download
+  url: /download/
