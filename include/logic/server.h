@@ -3,7 +3,7 @@
 
 #include "controller.h"
 
-#define SERVER_ASCENSION_MSG_PREFIX "^0[^1Ascension^0]^7 "
+#define SERVER_ASCENSION_MSG_PREFIX "^7[^6Ascension^7] "
 #define SERVER_CHAT_COLOR_FORMAT "^%c"
 
 typedef enum {
