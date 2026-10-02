@@ -9,7 +9,7 @@
 
 #define TIME_FORMAT "%Y-%m-%d %H:%M:%S"
 #define LOG_FOLDER "logs"
-#define LOG_FILE "bo1zt.log"
+#define LOG_FILE "ascension.log"
 
 typedef struct {
     LogLevel level;
@@ -48,7 +48,7 @@ void loggerInit(Controller *controller) {
         strftime(timeBuf, sizeof(timeBuf), TIME_FORMAT, t);
 
         fprintf(logger.logFile, "=====================================\n");
-        fprintf(logger.logFile, " BO1ZT Log\n");
+        fprintf(logger.logFile, " Ascension Log\n");
         fprintf(logger.logFile, " Started: %s\n", timeBuf);
         fprintf(logger.logFile, "=====================================\n\n");
         fflush(logger.logFile);

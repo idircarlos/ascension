@@ -16,7 +16,7 @@ void roundInit(Round *round, int number, int players) {
 bool roundStart(Round *round, int startTimestamp, bool special) {
     round->startTimestamp = startTimestamp;
     round->isSpecial = special;
-    round->zombiesLeft = special ? 0 : roundZombieCount(round); // We are not computing for dogs/monkeys rounds, instead it is being overriden from a custom bo1zt event.
+    round->zombiesLeft = special ? 0 : roundZombieCount(round); // We are not computing for dogs/monkeys rounds, instead it is being overriden from a custom Ascension event.
     round->drops = 0;
     return true;
 }

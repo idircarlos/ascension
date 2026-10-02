@@ -1,22 +1,22 @@
 <div style="display:flex;">
-  <img src="res/icon.png" alt="bo1zt icon" width="128">
+  <img src="res/icon.png" alt="Ascension icon" width="128">
 </div>
 
-# bo1zt
+# Ascension
 
-[![Ask DeepWiki](https://deepwiki.com/badge.svg)](https://deepwiki.com/idircarlos/bo1zt)
-[![GitHub stars](https://img.shields.io/github/stars/idircarlos/bo1zt?style=social)](https://github.com/idircarlos/bo1zt/stargazers)
-[![GitHub forks](https://img.shields.io/github/forks/idircarlos/bo1zt?style=social)](https://github.com/idircarlos/bo1zt/network/members)
-[![GitHub issues](https://img.shields.io/github/issues/idircarlos/bo1zt)](https://github.com/idircarlos/bo1zt/issues)
-[![GitHub license](https://img.shields.io/github/license/idircarlos/bo1zt)](https://github.com/idircarlos/bo1zt/blob/main/LICENSE)
-[![GitHub last commit](https://img.shields.io/github/last-commit/idircarlos/bo1zt)](https://github.com/idircarlos/bo1zt/commits/main)
+[![Ask DeepWiki](https://deepwiki.com/badge.svg)](https://deepwiki.com/idircarlos/ascension)
+[![GitHub stars](https://img.shields.io/github/stars/idircarlos/ascension?style=social)](https://github.com/idircarlos/ascension/stargazers)
+[![GitHub forks](https://img.shields.io/github/forks/idircarlos/ascension?style=social)](https://github.com/idircarlos/ascension/network/members)
+[![GitHub issues](https://img.shields.io/github/issues/idircarlos/ascension)](https://github.com/idircarlos/ascension/issues)
+[![GitHub license](https://img.shields.io/github/license/idircarlos/ascension)](https://github.com/idircarlos/ascension/blob/main/LICENSE)
+[![GitHub last commit](https://img.shields.io/github/last-commit/idircarlos/ascension)](https://github.com/idircarlos/ascension/commits/main)
 [![C](https://img.shields.io/badge/Language-C-blue)](https://en.wikipedia.org/wiki/C_(programming_language))
 [![libui](https://img.shields.io/badge/Library-libui-blue)](https://github.com/libui-ng/libui-ng)
 [![OpenGL](https://img.shields.io/badge/Library-OpenGL-blue)](https://www.opengl.org/)
 [![iniparser](https://img.shields.io/badge/Library-iniparser-blue)](https://gitlab.com/iniparser/iniparser)
 [![Scintilla](https://img.shields.io/badge/Library-Scintilla-blue)](https://www.scintilla.org/)
 [![OpenAssetTools](https://img.shields.io/badge/Library-OpenAssetTools-blue)](https://github.com/Laupetin/OpenAssetTools)
-[![PRs Welcome](https://img.shields.io/badge/PRs-welcome-brightgreen)](https://github.com/idircarlos/bo1zt/fork)
+[![PRs Welcome](https://img.shields.io/badge/PRs-welcome-brightgreen)](https://github.com/idircarlos/ascension/fork)
 
 **Black Ops 1 Zombies Trainer**
 
@@ -41,7 +41,7 @@ This tool is being created just for fun while learning reverse engineering funda
 Twitch Integration bridges your channel chat into the game, GSC Mods lets you write and load your own scripts from a built-in editor, and the Camo Manager builds weapon camos out of `.iwi` textures and installs them into the game, with a 3D viewer to preview them first.
 
 ## Differences between others mods
-This tool allows injecting any GSC script into the game without using any external mod tool. Because of this, I was able to set up bidirectional communication between bo1zt and GSC scripts via DVars (bo1zt → GSC) and VM notifications (GSC → bo1zt).
+This tool allows injecting any GSC script into the game without using any external mod tool. Because of this, I was able to set up bidirectional communication between Ascension and GSC scripts via DVars (Ascension → GSC) and VM notifications (GSC → Ascension).
 
 This is extremely powerful, since the mod can be extended to do whatever your imagination can come up with, without relying on all the limitations that GSC has. To explain it in a simpler way, you could say that you can ask GSC to do whatever you want from this mod at any moment, programmatically.
 
@@ -65,7 +65,7 @@ To build and run this project, you’ll need:
 ## Build and Run
 
 ```bash
-git clone --recursive https://github.com/idircarlos/bo1zt.git
+git clone --recursive https://github.com/idircarlos/ascension.git
 make -j8
 make run
 ```
@@ -91,7 +91,7 @@ After using TIM, it was really nice to have the FOV and some widgets automatical
 Note: If someone is willing to hack a game with malicious intentions, such as faking speedruns, they will do it anyway, whether with this tool or any other.
 
 ## Contributions
-Contributions are welcome! If you'd like to help improve **bo1zt**, feel free to:
+Contributions are welcome! If you'd like to help improve **Ascension**, feel free to:
 
 - Open an **Issue** to report bugs, suggest features, or share ideas.
 - Submit a **Pull Request** with improvements.

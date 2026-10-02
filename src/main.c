@@ -61,7 +61,7 @@ int processRunningThread(void *data) {
         Process *process = controllerGetProcess(controller);
 
         char corePath[MAX_PATH];
-        if (fileAppFolderPath(corePath, sizeof(corePath), "gsc\\bo1zt\\core")) {
+        if (fileAppFolderPath(corePath, sizeof(corePath), "gsc\\ascension\\core")) {
             resourcesExtractZip(IDR_GSC_ZIP, corePath);
         }
 

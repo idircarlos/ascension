@@ -19,8 +19,8 @@
 #define LOGS_WINDOW_HEIGHT 560
 #define LOGS_REFRESH_INTERVAL_MS 400
 
-#define LOGS_EXE_FILE "bo1zt.log"
-#define LOGS_DLL_FILE "bo1zt_dll.log"
+#define LOGS_EXE_FILE "ascension.log"
+#define LOGS_DLL_FILE "ascension_dll.log"
 
 static const char *const LOGS_LEVEL_NAME[] = {
     "Trace", "Debug", "Info", "Warn", "Error", "Fatal"
@@ -266,7 +266,7 @@ static uiControl *buildContent(void) {
     setExePath();
 
     tabs = uiNewTab();
-    uiTabAppend(tabs, "bo1zt", logsViewControl(exeView));
+    uiTabAppend(tabs, "Ascension", logsViewControl(exeView));
     uiTabAppend(tabs, "DLL", logsViewControl(dllView));
     uiTabSetMargined(tabs, 0, 1);
     uiTabSetMargined(tabs, 1, 1);

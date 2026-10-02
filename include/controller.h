@@ -10,7 +10,7 @@
 
 #define GAME_EXECUTABLE_NAME "BlackOps.exe"
 #define GAME_WINDOW_NAME_PREFIX "Call of Duty"
-#define DLL_NAME "bo1zt.dll"
+#define DLL_NAME "ascension.dll"
 
 typedef struct Controller Controller;
 

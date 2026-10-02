@@ -401,7 +401,7 @@ static void update() {
 
 bool uiGamePromptLocation(char *outDir, size_t size) {
     if (!outDir || size == 0) return false;
-    int okPressed = uiMsgBoxOkCancel(parent, "Welcome to Black Ops 1 Zombies Trainer!", 
+    int okPressed = uiMsgBoxOkCancel(parent, "Welcome to Ascension!", 
              "Before training the be next Black Ops 1 Zombies hero...\nI need to know where your game is installed.\nPlease select the BlackOps.exe executable to continue.");
 
     if (!okPressed) return false;

@@ -1,10 +1,10 @@
 ---
 layout: home
-title: bo1zt Documentation
-description: Documentation site for bo1zt.
+title: Ascension Documentation
+description: Documentation site for Ascension.
 permalink: /
 hero:
-  name: bo1zt
+  name: Ascension
   text: Documentation
   tagline: Coming soon...
   actions:

@@ -96,7 +96,7 @@ bool camoIwdFileName(char *out, size_t bufSize, const CamoBundle *bundle) {
     memcpy(id8, bundle->id, take);
     id8[take] = '\0';
 
-    int n = snprintf(out, bufSize, "iw_bo1zt_%s_%s.iwd", stem, id8);
+    int n = snprintf(out, bufSize, "iw_ascension_%s_%s.iwd", stem, id8);
     if (n < 0 || (size_t)n >= bufSize) {
         LOG_ERROR("IWD filename too long");
         return false;

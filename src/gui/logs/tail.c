@@ -15,7 +15,7 @@
 #define LOGS_TOKEN_LENGTH 5
 
 #define LOGS_BANNER_MINIMUM 8
-#define LOGS_TITLE_MARKER " BO1ZT "
+#define LOGS_TITLE_MARKER " Ascension "
 #define LOGS_RUN_MARKER " Started: "
 
 static const char *const LOGS_LEVEL_TOKEN[] = {

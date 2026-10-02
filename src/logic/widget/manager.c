@@ -26,7 +26,7 @@ typedef enum {
 } WidgetIndex;
 
 // INI/config names (kept identical to the previous GUI-side table so existing
-// bo1zt.ini files keep matching).
+// ascension.ini files keep matching).
 static const char *WIDGET_CONFIG_NAMES[N_WIDGETS] = {
     "Timer", "RoundTimer", "Velocity", "Cycle", "Zombies", "Entities",
 };

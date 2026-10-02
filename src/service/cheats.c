@@ -63,7 +63,7 @@ bool serviceCheatExists(const char *name) {
 // not live game memory. Reads and writes both go through the cheat manager:
 // the config value is always readable and writable regardless of whether a game
 // is attached, and the manager applies the cheat live (and re-applies on
-// attach) when conditions allow. This keeps /god (chat), `bo1zt god` (CLI), the
+// attach) when conditions allow. This keeps /god (chat), `ascension god` (CLI), the
 // GUI checkbox and PUT /cheats/god on one path.
 
 ServiceResult serviceCheatGet(Service *service, const char *name, bool *enabledOut) {

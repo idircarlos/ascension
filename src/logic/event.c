@@ -118,7 +118,7 @@ static bool eventHandleVMNotify(Event event) {
     if (strcmp(event.data.vmNotify.eventName, "power_on") == 0) {
         return gamePowerOn(game, event.timestamp);
     }
-    if (strncmp(event.data.vmNotify.eventName, "bo1zt::Level::RoundZombiesLeft", 30) == 0) {
+    if (strncmp(event.data.vmNotify.eventName, "ascension::Level::RoundZombiesLeft", 34) == 0) {
         int currentRoundZombiesLeft = game->currentRound.zombiesLeft;
         int roundZombiesLeft = event.data.vmNotify.eventValue;
         if (currentRoundZombiesLeft == 0) {
@@ -130,24 +130,24 @@ static bool eventHandleVMNotify(Event event) {
         }
         return true;
     }
-    if (strncmp(event.data.vmNotify.eventName, "bo1zt::Level::Powerup::Dropped", 30) == 0) {
+    if (strncmp(event.data.vmNotify.eventName, "ascension::Level::Powerup::Dropped", 34) == 0) {
         Powerup powerup = (Powerup)event.data.vmNotify.eventValue;
         return gamePowerupDropped(game, powerup);
     }
-    if (strncmp(event.data.vmNotify.eventName, "bo1zt::Level::Powerup::NewCycle", 31) == 0) {
+    if (strncmp(event.data.vmNotify.eventName, "ascension::Level::Powerup::NewCycle", 35) == 0) {
         gamePowerupNewCycle(game);
         return true;
     }
-    if (strncmp(event.data.vmNotify.eventName, "bo1zt::Player::NumPerks", 24) == 0) {
+    if (strncmp(event.data.vmNotify.eventName, "ascension::Player::NumPerks", 28) == 0) {
         return gameSetNumPerks(game, event.data.vmNotify.eventValue);
     }
     if (strcmp(event.data.vmNotify.eventName, "chest_has_been_used") == 0) {
         return gameTradeHit(game);
     }
-    if (strncmp(event.data.vmNotify.eventName, "bo1zt::Worker", 13) == 0) {
+    if (strncmp(event.data.vmNotify.eventName, "ascension::Worker", 17) == 0) {
         int index;
         char response[256];
-        if (sscanf(event.data.vmNotify.eventName, "bo1zt::Worker%d::%255s", &index, response) == 2) {
+        if (sscanf(event.data.vmNotify.eventName, "ascension::Worker%d::%255s", &index, response) == 2) {
             LOG_DEBUG("GSC response from worker %d: %s", index, response);
             gscWriteResponse(gsc, index, response);
         }

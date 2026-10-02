@@ -11,7 +11,7 @@
 #include <stdarg.h>
 
 #define INI_FOLDER "config"
-#define INI_FILE_NAME "bo1zt.ini"
+#define INI_FILE_NAME "ascension.ini"
 #define STRFMT_BUFF_SIZE 1024
 #define COLOR_INI_FMT "Color(%hhu,%hhu,%hhu,%hhu)"
 #define COLOR_INI_DEFAULT "Color(111,111,111,111)"

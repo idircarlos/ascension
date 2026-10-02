@@ -5,8 +5,8 @@ init_() {
 overrideCharacter() {
     multiplayer = GetNumExpectedPlayers() > 1;
     if (multiplayer || level.script == "zombie_pentagon") return; // Not supporting this on MP and Five
-    self.characterId = int(getdvar("bo1zt_character"));
-    if (self.characterId == 4) return; // characterId == 4 bo1zt means Random, so we skip the override.
+    self.characterId = int(getdvar("ascension_character"));
+    if (self.characterId == 4) return; // characterId == 4 Ascension means Random, so we skip the override.
     level.zombiemode_give_player_model_override = ::givePlayerModelOverride;
 }
 

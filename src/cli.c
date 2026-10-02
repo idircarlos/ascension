@@ -24,7 +24,7 @@
 
 static int reportClientError(const Client *client, ClientResult result) {
     if (result == CLIENT_ERR_UNREACHABLE) {
-        fprintf(stderr, "error: cannot reach bo1zt on 127.0.0.1 (is it running?)\n");
+        fprintf(stderr, "error: cannot reach Ascension on 127.0.0.1 (is it running?)\n");
         return 1;
     }
     const char *message = clientLastErrorMessage(client);
@@ -238,7 +238,7 @@ static int cmdHealth(Client *client) {
     char version[64];
     ClientResult r = clientGetVersion(client, version, sizeof(version));
     if (r != CLIENT_OK) return reportClientError(client, r);
-    printf("bo1zt %s\n", version);
+    printf("Ascension %s\n", version);
     return 0;
 }
 
@@ -874,7 +874,7 @@ static int cmdTwitch(Client *client, const Namespace *ns) {
 }
 
 static void buildParser(Parser *p) {
-    SetDescription(p, "bo1zt CLI - control a running bo1zt instance over HTTP.");
+    SetDescription(p, "Ascension CLI - control a running Ascension instance over HTTP.");
 
     Subparsers *sp = AddSubparsers(p, "command");
     SetSubparsersRequired(sp, true);
@@ -965,7 +965,7 @@ static void buildParser(Parser *p) {
 }
 
 int cliMain(int argc, char **argv) {
-    Parser *p = NewParser("bo1zt");
+    Parser *p = NewParser("ascension");
     buildParser(p);
 
     Namespace *ns = ParseArgs(p, argc, argv);

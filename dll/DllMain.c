@@ -1,5 +1,5 @@
 /*
-* BO1ZT DLL - Main Entry Point
+* Ascension DLL - Main Entry Point
 */
 
 #include <windows.h>
@@ -167,8 +167,8 @@ bool SendEvent(const Event* ev) {
     return true;
 }
 
-// Initialize BO1ZT DLL
-static bool InitBO1ZT() {
+// Initialize Ascension DLL
+static bool InitAscension() {
     LOG_INFO("Initializing hooks...");
 
     InitializeCriticalSection(&pipeLock);
@@ -190,10 +190,10 @@ static bool InitBO1ZT() {
 BOOL WINAPI DllMain(HINSTANCE hinstDLL, DWORD fdwReason, LPVOID lpvReserved) {
     switch (fdwReason) {
         case DLL_PROCESS_ATTACH:
-            LogInit("bo1zt_dll.log");
-            LOG_INFO("BO1ZT DLL loaded");
+            LogInit("ascension_dll.log");
+            LOG_INFO("Ascension DLL loaded");
             DisableThreadLibraryCalls(hinstDLL);
-            InitBO1ZT();
+            InitAscension();
             break;
             
         case DLL_PROCESS_DETACH:
@@ -204,7 +204,7 @@ BOOL WINAPI DllMain(HINSTANCE hinstDLL, DWORD fdwReason, LPVOID lpvReserved) {
             if (pipe.handle != INVALID_HANDLE_VALUE) {
                 CloseHandle(pipe.handle);
             }
-            LOG_INFO("BO1ZT DLL unloaded");
+            LOG_INFO("Ascension DLL unloaded");
             break;
     }
     

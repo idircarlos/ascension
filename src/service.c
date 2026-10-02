@@ -53,11 +53,11 @@ void serviceDestroy(Service *service) {
 
 const char *serviceGetVersion(Service *service) {
     (void)service;
-    return BO1ZT_VERSION;
+    return ASCENSION_VERSION;
 }
 
 int serviceResolvePort(void) {
-    const char *env = getenv("BO1ZT_PORT");
+    const char *env = getenv("ASCENSION_PORT");
     if (env && *env) {
         int p = atoi(env);
         if (p > 0 && p < 65536) return p;

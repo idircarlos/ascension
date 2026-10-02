@@ -104,7 +104,7 @@ static void showChatMessage(TwitchManager *manager, const TwitchEvent *event) {
 
 static void announceRaid(TwitchManager *manager, const TwitchEvent *event) {
     char line[GAME_CHAT_LINE_SIZE];
-    snprintf(line, sizeof(line), SERVER_BO1ZT_MSG_PREFIX "%s is raiding with %d viewers!",
+    snprintf(line, sizeof(line), SERVER_ASCENSION_MSG_PREFIX "%s is raiding with %d viewers!",
              event->chatter.displayName, event->viewerCount);
     sanitize(line);
     serverCenterMessage(_controllerGetServer(manager->controller), line);
@@ -170,7 +170,7 @@ static bool pollUntilAuthorized(TwitchManager *manager, const TwitchAuthFlow *fl
             return false;
         }
     }
-    failWith(manager, "the code expired before you authorized bo1zt");
+    failWith(manager, "the code expired before you authorized Ascension");
     return false;
 }
 

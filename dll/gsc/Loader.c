@@ -24,12 +24,12 @@
 #define GSC_SIZE_NAME 512
 #define GSC_SIZE_PATH 1024
 
-#define GSC_APP_FOLDER "bo1zt"
+#define GSC_APP_FOLDER "ascension"
 #define GSC_APPDATA_SCRIPTS "gsc"
 #define GSC_APPDATA_DUMP "dump"
 
 // Asset names mirror the layout under the scripts folder, so a file path is its GSC path
-#define GSC_SCRIPT_ROOT "bo1zt"
+#define GSC_SCRIPT_ROOT "ascension"
 #define GSC_SCRIPT_MODS_ROOT GSC_SCRIPT_ROOT "/mods"
 #define GSC_SCRIPT_ENTRY GSC_SCRIPT_ROOT "/core/main"
 

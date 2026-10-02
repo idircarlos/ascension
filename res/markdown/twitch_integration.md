@@ -1,6 +1,6 @@
 # Twitch Integration
 
-bo1zt connects to your own Twitch channel to read and write to the chat. It cannot
+Ascension connects to your own Twitch channel to read and write to the chat. It cannot
 change your stream, your account or your channel settings.
 
 ## Create your Twitch application
@@ -9,7 +9,7 @@ change your stream, your account or your channel settings.
    in with your Twitch account.
 2. Click **Register Your Application**.
 3. Fill the form:
-   - **Name**: anything free, for example `bo1zt-yourname`.
+   - **Name**: anything free, for example `ascension-yourname`.
    - **OAuth Redirect URLs**: `http://localhost`.
    - **Category**: `Game Integration`.
    - **Client Type**: `Public`.

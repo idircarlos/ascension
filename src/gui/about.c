@@ -24,10 +24,10 @@ static uiControl *build(Client *client, uiWindow *parentInstance) {
     uiBox *infoBox = uiNewVerticalBox();
     uiBoxSetPadded(infoBox, 1);
 
-    uiLabel *titleLabel = uiNewLabel("Black Ops 1 Zombies Trainer v" BO1ZT_VERSION);
-    uiLink *discordLink = uiNewLink("Join our discord community", BO1ZT_DISCORD_URL);
-    uiLink *githubLink = uiNewLink("See source code on Github", BO1ZT_GITHUB_URL);
-    uiLabel *authorLabel = uiNewLabel("By " BO1ZT_BY);
+    uiLabel *titleLabel = uiNewLabel("Ascension v" ASCENSION_VERSION);
+    uiLink *discordLink = uiNewLink("Join our discord community", ASCENSION_DISCORD_URL);
+    uiLink *githubLink = uiNewLink("See source code on Github", ASCENSION_GITHUB_URL);
+    uiLabel *authorLabel = uiNewLabel("By " ASCENSION_BY);
 
     uiBoxAppend(infoBox, uiControl(titleLabel), 0);
     uiBoxAppend(infoBox, uiControl(discordLink), 0);

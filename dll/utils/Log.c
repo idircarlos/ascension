@@ -6,7 +6,7 @@
 #include <string.h>
 
 #define TIME_FORMAT "%Y-%m-%d %H:%M:%S"
-#define LOG_FOLDER "bo1zt\\logs"
+#define LOG_FOLDER "ascension\\logs"
 
 typedef struct {
     LogLevel level;
@@ -78,7 +78,7 @@ bool LogInit(const char* filename) {
     char timestamp[64];
     GetTimestamp(timestamp, sizeof(timestamp));
     fprintf(file, "=====================================\n");
-    fprintf(file, " BO1ZT DLL Log\n");
+    fprintf(file, " Ascension DLL Log\n");
     fprintf(file, " Started: %s\n", timestamp);
     fprintf(file, "=====================================\n\n");
     

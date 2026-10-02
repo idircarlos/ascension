@@ -324,7 +324,7 @@ HttpClientResponse httpsClientRequest(const char *host, int port, const char *me
 
     if (!wideHost || !wideMethod || !widePath) { LOG_ERROR("HTTPS: out of memory"); goto cleanup; }
 
-    session = WinHttpOpen(L"bo1zt/1.0",
+    session = WinHttpOpen(L"Ascension/1.0",
                           WINHTTP_ACCESS_TYPE_AUTOMATIC_PROXY,
                           WINHTTP_NO_PROXY_NAME, WINHTTP_NO_PROXY_BYPASS, 0);
     if (!session) { LOG_ERROR("HTTPS: WinHttpOpen failed (%lu)", GetLastError()); goto cleanup; }

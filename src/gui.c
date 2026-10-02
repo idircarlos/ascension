@@ -134,7 +134,7 @@ static void setupUi() {
 }
 
 static void setupWindow() {
-    window = uiNewWindow("Black Ops 1 Zombies Trainer", WINDOW_WIDTH, WINDOW_HEIGHT, 0);
+    window = uiNewWindow("Ascension", WINDOW_WIDTH, WINDOW_HEIGHT, 0);
     uiWindowSetIcon(window, IDI_ICON1);
     uiWindowOnClosing(window, onClosing, NULL);
     uiWindowSetMargined(window, 1);

@@ -32,7 +32,7 @@ WebSocket *webSocketConnect(const char *host, int port, const char *path, int re
 
     if (!wideHost || !widePath) { LOG_ERROR("WebSocket: out of memory"); goto fail; }
 
-    socket->session = WinHttpOpen(L"bo1zt/1.0", WINHTTP_ACCESS_TYPE_AUTOMATIC_PROXY,
+    socket->session = WinHttpOpen(L"Ascension/1.0", WINHTTP_ACCESS_TYPE_AUTOMATIC_PROXY,
                                   WINHTTP_NO_PROXY_NAME, WINHTTP_NO_PROXY_BYPASS, 0);
     if (!socket->session) { LOG_ERROR("WebSocket: WinHttpOpen failed (%lu)", GetLastError()); goto fail; }
 

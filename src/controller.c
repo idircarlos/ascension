@@ -135,9 +135,9 @@ bool controllerAttachGame(Controller *controller) {
     controller->state->gameResets = engineGetGameResets(controller->engine);
 
     if (controllerIsGameRunning(controller) && controllerIsZombiesGameOngoing(controller)) {
-        serverChatMessage(controller->server, SERVER_BO1ZT_MSG_PREFIX "Zombies game is already in progress...");
-        serverChatMessage(controller->server, SERVER_BO1ZT_MSG_PREFIX "Some functionalities may not work.");
-        serverChatMessage(controller->server, SERVER_BO1ZT_MSG_PREFIX "You might want to /restart the run!");
+        serverChatMessage(controller->server, SERVER_ASCENSION_MSG_PREFIX "Zombies game is already in progress...");
+        serverChatMessage(controller->server, SERVER_ASCENSION_MSG_PREFIX "Some functionalities may not work.");
+        serverChatMessage(controller->server, SERVER_ASCENSION_MSG_PREFIX "You might want to /restart the run!");
         
         // Initialize activeGame with current game state when attaching mid-game
         Game *activeGame = &controller->state->activeGame;

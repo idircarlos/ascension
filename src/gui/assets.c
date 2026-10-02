@@ -112,7 +112,7 @@ bool uiAssetsInstall(const char *gameLocation) {
                         screenHeight / 2 - (ASSETS_WINDOW_HEIGHT / 2));
     uiControlShow(uiControl(s.win));
 
-    LOG_INFO("Extracting game assets from '%s' into the bo1zt models folder...", gameLocation);
+    LOG_INFO("Extracting game assets from '%s' into the Ascension models folder...", gameLocation);
     Thread *worker = threadCreate(assetsWorker, &s);
     if (!worker) {
         LOG_ERROR("Failed to start asset extraction thread");

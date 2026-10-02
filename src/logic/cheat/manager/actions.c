@@ -13,7 +13,7 @@
 static void notifyCheatFailed(CheatManager *manager) {
     if (!manager || !manager->controller) return;
     Server *server = _controllerGetServer(manager->controller);
-    serverChatMessage(server, SERVER_BO1ZT_MSG_PREFIX "Cheat failed to apply");    
+    serverChatMessage(server, SERVER_ASCENSION_MSG_PREFIX "Cheat failed to apply");    
 }
 
 static bool checkConditions(CheatManager *manager, CheatCondition conditions) {
@@ -48,7 +48,7 @@ static bool checkSimpleCheatConditions(CheatManager *manager, SimpleCheatName ch
 static bool applyCharacter(CheatManager *manager, int character) {
     Server *server = _controllerGetServer(manager->controller);
     if (!server) return false;
-    return serverSetDVarInt(server, "bo1zt_character", character);
+    return serverSetDVarInt(server, "ascension_character", character);
 }
 
 CheatResult cheatManagerSetToggle(CheatManager *manager, CheatName cheat, bool enabled) {

@@ -22,8 +22,8 @@ DLL_CFLAGS  := -Wall -O2 $(ARCH) -Ishared -Iexternal/cdl86 -Iexternal/miniz -Idl
 DLL_LDFLAGS := -shared -s $(ARCH) -luser32 -lkernel32 -static-libgcc
 
 # Targets
-TARGET       := build/bo1zt.exe
-DLL_TARGET   := build/bo1zt.dll
+TARGET       := build/ascension.exe
+DLL_TARGET   := build/ascension.dll
 
 # Sources
 SRC     := $(shell find src -type f -name "*.c")

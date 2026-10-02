@@ -1,10 +1,10 @@
-title: bo1zt Documentation
-description: Documentation site for bo1zt, the Black Ops 1 Zombies trainer.
+title: Ascension Documentation
+description: Documentation site for Ascension, the Black Ops 1 Zombies trainer.
 url: "https://tryascension.dev"
 baseurl: ""
 lang: en-US
 timezone: UTC
-logo: /assets/images/bo1zt-icon.png
+logo: /assets/images/ascension-icon.png
 
 markdown: kramdown
 kramdown:
@@ -41,10 +41,10 @@ defaults:
 
 jekyll_vitepress:
   branding:
-    site_title: bo1zt
+    site_title: Ascension
     logo:
-      default: /assets/images/bo1zt-icon.png
-      alt: bo1zt
+      default: /assets/images/ascension-icon.png
+      alt: Ascension
       width: 24
       height: 24
   syntax:
@@ -52,7 +52,7 @@ jekyll_vitepress:
     dark_theme: github.dark
   github_star:
     enabled: true
-    repository: idircarlos/bo1zt
+    repository: idircarlos/ascension
     text: Star
     show_count: true
 

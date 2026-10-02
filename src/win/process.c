@@ -353,7 +353,7 @@ bool processInjectDll(Process *process, const char *dllName) {
     char fullDllPath[MAX_PATH];
     snprintf(fullDllPath, MAX_PATH, "%s\\%s", folder, dllName);
 
-    // Extract DLL from resources to bo1zt folder
+    // Extract DLL from resources to ascension folder
     if (!resourcesExtractToFile(IDR_CHAT_HOOK_DLL, fullDllPath)) {
         LOG_ERROR("Failed to extract DLL from resources");
         return false;

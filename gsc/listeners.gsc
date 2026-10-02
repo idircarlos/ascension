@@ -24,7 +24,7 @@ onZombieKilled() {
         temp_zombies_left = get_enemy_count() + level.zombie_total; 
         if (round_zombies_left != temp_zombies_left) {
             round_zombies_left = temp_zombies_left;
-            self notify("bo1zt::Level::RoundZombiesLeft", round_zombies_left);
+            self notify("ascension::Level::RoundZombiesLeft", round_zombies_left);
         }
         wait 0.05;
     }
@@ -41,9 +41,9 @@ onPowerupDropped() {
             continue;
         }
         if (postIndex < preIndex) {
-            self notify("bo1zt::Level::Powerup::NewCycle");
+            self notify("ascension::Level::Powerup::NewCycle");
         }
-        self notify("bo1zt::Level::Powerup::Dropped", getPowerupId(powerup.powerup_name));   
+        self notify("ascension::Level::Powerup::Dropped", getPowerupId(powerup.powerup_name));   
         if (powerup.powerup_name == "free_perk") {
             powerup thread onFreePerkPowerupGrabbed(self);
         }
@@ -52,7 +52,7 @@ onPowerupDropped() {
 
 onFreePerkPowerupGrabbed(player) {
     self waittill("powerup_grabbed");
-    self notify("bo1zt::Player::NumPerks", player.num_perks);
+    self notify("ascension::Player::NumPerks", player.num_perks);
 }
 
 onPerkBought() {
@@ -60,7 +60,7 @@ onPerkBought() {
     self waittill("spawned_player");
     while(1) {
         self waittill("perk_bought");
-        self notify("bo1zt::Player::NumPerks", self.num_perks);
+        self notify("ascension::Player::NumPerks", self.num_perks);
     }
 }
 
@@ -69,7 +69,7 @@ onPerkLost() {
     self waittill("spawned_player");
     while(1) {
         self waittill("perk_lost");
-        self notify("bo1zt::Player::NumPerks", self.num_perks);
+        self notify("ascension::Player::NumPerks", self.num_perks);
     }
 }
 

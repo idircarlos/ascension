@@ -62,7 +62,7 @@ GSCResponse gscCall(GSC *gsc, GSCMethod method, GSCArgs args) {
     int index = poolAcquire(gsc->pool);
 
     char dvarKey[256];
-    snprintf(dvarKey, sizeof(dvarKey), "bo1zt_gsc_worker_%d", index);
+    snprintf(dvarKey, sizeof(dvarKey), "ascension_gsc_worker_%d", index);
 
     char *dvarValue = _gscMethodBuildDvarValue(methodString, argsString);
     if (!dvarValue) {
@@ -149,6 +149,6 @@ char *_gscMethodBuildDvarValue(const char *methodString, const char *argsString)
     char *value = (char*)calloc(GSC_DVAR_VALUE_MAX_LEN, 1);
     if (!value) return NULL;
 
-    snprintf(value, GSC_DVAR_VALUE_MAX_LEN, "bo1zt::%s::%s", methodString, argsString);
+    snprintf(value, GSC_DVAR_VALUE_MAX_LEN, "ascension::%s::%s", methodString, argsString);
     return value;
 }

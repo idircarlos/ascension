@@ -7,7 +7,7 @@
 #include <stdlib.h>
 #include <string.h>
 
-#define APP_FOLDER "bo1zt"
+#define APP_FOLDER "ascension"
 
 static bool removeTree(const char *path) {
     char pattern[MAX_PATH];
