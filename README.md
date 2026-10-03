@@ -1,27 +1,30 @@
-<div style="display:flex;">
-  <img src="res/icon.png" alt="Ascension icon" width="128">
-</div>
+<div align="center">
+
+<img src="res/icon.png" alt="Ascension" height="250">
 
 # Ascension
+A trainer for Black Ops 1 Zombies written in C. This tool is being created just for fun while learning reverse engineering fundamentals.
 
-[![Ask DeepWiki](https://deepwiki.com/badge.svg)](https://deepwiki.com/idircarlos/ascension)
+[![Ask DeepWiki](https://img.shields.io/badge/Ask%20DeepWiki-blue?logo=data%3Aimage%2Fpng%3Bbase64%2CiVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAACXBIWXMAAAPoAAAD6AG1e1JrAAACIUlEQVRYw%2B2XP2gUQRTGv7d3JhYWQawkIBaCVWzETos0gmAnVoKNTSoLK0E7EQQrC20sBVFBtLPQRgTBtBaKjYgIQUSxiJq7fT%2BLvCGPJZdNLt4dQj5Y3u7sznzfzLw%2Fs9IO%2FicANiniCujEfWdsQgBLxAbsbraPZcmBfcAt4DNwKQsZNfEUsAB8YRV12LfA6ZHuedg7AO7ed%2Fc%2BUBcbQhbiu%2B6wXIM6EnZWkszMJe2Ke0n6I2la0v51hFeSMLN6OwIK6jJwEBdUYb2MAxRSz6sY4geiahFgLe1Hwq6YWe3us8AN4FQQU4QM64SPY69Xyr43fADgNjAPXHb3peSsD4FDQ0VLEjAHvIhBPS6AHvA1bBO9JPAXcHFbIRtJ5yzwIQZ9CZwAusDJENIkLqsG8DpNyIZJwSUk9wLHgakcesC1JCCjiHm1kYDNOEjptCxpSVK%2F8f73OFLxPLAYM3oCzEX7MXf%2FlJbc%2F8kWpA4HgQdpYI9IWAbeh83whi84cHXL%2B58EPBoQhnmm94EzwE3gZ2p%2FDhzdbhg%2BTaRr01x7ftb4%2FjBwFzjXrCvDpmLW9crVLNeR9CaapoGemb2TdCERW1tNaBNQ8jktwmozqwtpqRNtdWAjARYk39IS12ZWRX7vmJmA71nQZgi36gN7gCvAj5xc3P0jcH7kx7Ik5IC73wsh14GZsZySow5002l4Jr0b6%2Bm4eSyvpAn8lEzsx2QHo8RfUrlN%2BuPq4ksAAAAASUVORK5CYII%3D&labelColor=black)](https://deepwiki.com/idircarlos/ascension)
 [![GitHub stars](https://img.shields.io/github/stars/idircarlos/ascension?style=social)](https://github.com/idircarlos/ascension/stargazers)
 [![GitHub forks](https://img.shields.io/github/forks/idircarlos/ascension?style=social)](https://github.com/idircarlos/ascension/network/members)
 [![GitHub issues](https://img.shields.io/github/issues/idircarlos/ascension)](https://github.com/idircarlos/ascension/issues)
 [![GitHub license](https://img.shields.io/github/license/idircarlos/ascension)](https://github.com/idircarlos/ascension/blob/main/LICENSE)
 [![GitHub last commit](https://img.shields.io/github/last-commit/idircarlos/ascension)](https://github.com/idircarlos/ascension/commits/main)
-[![C](https://img.shields.io/badge/Language-C-blue)](https://en.wikipedia.org/wiki/C_(programming_language))
-[![libui](https://img.shields.io/badge/Library-libui-blue)](https://github.com/libui-ng/libui-ng)
-[![OpenGL](https://img.shields.io/badge/Library-OpenGL-blue)](https://www.opengl.org/)
-[![iniparser](https://img.shields.io/badge/Library-iniparser-blue)](https://gitlab.com/iniparser/iniparser)
-[![Scintilla](https://img.shields.io/badge/Library-Scintilla-blue)](https://www.scintilla.org/)
-[![OpenAssetTools](https://img.shields.io/badge/Library-OpenAssetTools-blue)](https://github.com/Laupetin/OpenAssetTools)
 [![PRs Welcome](https://img.shields.io/badge/PRs-welcome-brightgreen)](https://github.com/idircarlos/ascension/fork)
+[![C](https://img.shields.io/badge/Language-C-blue)](https://en.wikipedia.org/wiki/C_(programming_language))
+[![libui](https://img.shields.io/badge/Library-libui-blue?labelColor=black)](https://github.com/libui-ng/libui-ng)
+[![OpenGL](https://img.shields.io/badge/Library-OpenGL-blue?labelColor=black)](https://www.opengl.org/)
+[![iniparser](https://img.shields.io/badge/Library-iniparser-blue?labelColor=black)](https://gitlab.com/iniparser/iniparser)
+[![Scintilla](https://img.shields.io/badge/Library-Scintilla-blue?labelColor=black)](https://www.scintilla.org/)
+[![OpenAssetTools](https://img.shields.io/badge/Library-OpenAssetTools-blue?labelColor=black)](https://github.com/Laupetin/OpenAssetTools)
 
-**Black Ops 1 Zombies Trainer**
+</div>
 
-A trainer for *Black Ops 1 Zombies* written in C.
-This tool is being created just for fun while learning reverse engineering fundamentals. This tool is still under development. Main features:
+---
+
+
+This tool is still under development. Main features:
 
 |    Player       |  Hacks                 |  Graphics                   |  Misc                                  |  Tools                    |
 | --------------- | ---------------------- | --------------------------- | -------------------------------------- | ------------------------- |
@@ -38,7 +41,6 @@ This tool is being created just for fun while learning reverse engineering funda
 |                 |   No Shellshock        |                             |   Game resets                          |                           |
 |                 |   Increase Knife Range |                             |   Persisted Settings                   |                           |
 
-Twitch Integration bridges your channel chat into the game, GSC Mods lets you write and load your own scripts from a built-in editor, and the Camo Manager builds weapon camos out of `.iwi` textures and installs them into the game, with a 3D viewer to preview them first.
 
 ## Differences between others mods
 This tool allows injecting any GSC script into the game without using any external mod tool. Because of this, I was able to set up bidirectional communication between Ascension and GSC scripts via DVars (Ascension → GSC) and VM notifications (GSC → Ascension).
